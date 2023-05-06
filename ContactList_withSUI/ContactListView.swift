@@ -15,7 +15,9 @@ struct ContactListView: View {
         NavigationStack {
             VStack {
                 List(personDetails, id: \.fullName) { person in
-                    ContactRowView(personContact: person)
+                    NavigationLink(destination: PersonContactView(personContact: person)) {
+                        ContactRowView(personContact: person)
+                    }
                 }
                 .listStyle(.plain)
             }

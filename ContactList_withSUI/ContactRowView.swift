@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContactRowView: View {
+    @State private var isPresented = false
     let personContact: Person
     
     var body: some View {
-        HStack {
-            Text("\(personContact.fullName)")
-                .frame(alignment: .leading)
-            
-            Spacer()
+        Button(action: { isPresented.toggle() }) {
+            HStack {
+                Text("\(personContact.fullName)")
+                    .frame(alignment: .leading)
+                
+                Spacer()
+            }
+        }
+        .sheet(isPresented: $isPresented) {
+            PersonContactView(personContact: personContact)
         }
     }
 }

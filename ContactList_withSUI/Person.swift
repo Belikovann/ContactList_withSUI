@@ -64,7 +64,7 @@ extension Person {
         let surname = "\(surnames[Int.random(in: 0..<surnames.count)])"
         let email = emails[Int.random(in: 0..<emails.count)]
         let phone = phones[Int.random(in: 0..<phones.count)]
-        let fullName = "\(name) \(surname)"
+
 
         let personContact = Person(name: name, surname: surname, email: email, phoneNumber: phone)
 
