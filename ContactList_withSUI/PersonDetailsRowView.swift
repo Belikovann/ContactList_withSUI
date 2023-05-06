@@ -32,8 +32,8 @@ struct PersonDetailsRowView: View {
         }
     }
 }
-    
-    struct PersonDetailsRowView_Previews: PreviewProvider {
+
+struct PersonDetailsRowView_Previews: PreviewProvider {
         static var previews: some View {
             PersonDetailsRowView(personContact: Person.getContact())
         }

@@ -20,6 +20,7 @@ struct NumberListView: View {
                                 .foregroundColor(.blue)
                                 .frame(width: 20, alignment: .leading)
                             Text("\(person.phoneNumber)")
+                            
                             Spacer()
                         }
                         HStack {
@@ -27,6 +28,7 @@ struct NumberListView: View {
                                 .foregroundColor(.blue)
                                 .frame(width: 20, alignment: .leading)
                             Text("\(person.email)")
+                            
                             Spacer()
                             
                         }
@@ -34,6 +36,7 @@ struct NumberListView: View {
                 }
             }
             .navigationTitle("Contact List")
+            .listStyle(.plain)
         }
     }
 }

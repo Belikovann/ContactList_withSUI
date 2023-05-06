@@ -21,7 +21,7 @@ struct ContactRowView: View {
             }
         }
         .sheet(isPresented: $isPresented) {
-            PersonContactView(personContact: personContact)
+            PersonDetailsView(personContact: personContact)
         }
     }
 }

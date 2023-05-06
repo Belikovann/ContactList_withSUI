@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonContactView: View {
+struct PersonDetailsView: View {
     let personContact: Person
     
     var body: some View {
@@ -24,6 +24,6 @@ struct PersonContactView: View {
 
 struct PersonContactView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonContactView(personContact: Person.getContact())
+        PersonDetailsView(personContact: Person.getContact())
     }
 }
