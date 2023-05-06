@@ -12,10 +12,16 @@ struct ContactListView: View {
 
     
     var body: some View {
-        List(personDetails, id: \.fullName) { person in
-            ContactRowView(personContact: person)
+        NavigationStack {
+            VStack {
+                List(personDetails, id: \.fullName) { person in
+                    ContactRowView(personContact: person)
+                }
+                .listStyle(.plain)
+            }
+            .navigationTitle("Contact List")
         }
-        .listStyle(.plain)
+       
     }
 }
 

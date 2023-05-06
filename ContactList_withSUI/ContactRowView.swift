@@ -13,7 +13,6 @@ struct ContactRowView: View {
     var body: some View {
         HStack {
             Text("\(personContact.fullName)")
-                .font(.title)
                 .frame(alignment: .leading)
             
             Spacer()

@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct PersonContactView: View {
-    let personDetails: Person
+    let personContact: Person
     
     var body: some View {
-        VStack {
-            Text("\(personDetails.fullName)")
+        VStack(alignment: .leading) {
+            Text("\(personContact.fullName)")
                 .font(.title)
                 .bold()
-            Image(systemName: "person.fill")
-                .resizable()
-                .frame(width: 150, height: 150, alignment: .center)
             
+            PersonDetailsRowView(personContact: personContact)
+            
+            Spacer()
         }
-        Spacer()
     }
 }
 
 struct PersonContactView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonContactView(personDetails: Person.getContact())
+        PersonContactView(personContact: Person.getContact())
     }
 }
