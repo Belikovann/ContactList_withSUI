@@ -12,9 +12,9 @@ struct PersonContactView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
-            PersonDetailsRowView(personContact: personContact)
-            
+            VStack {
+                PersonDetailsRowView(personContact: personContact)
+            }
             Spacer()
         }
         .navigationTitle("\(personContact.fullName)")

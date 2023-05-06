@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct NumberListView: View {
+    private let personDetails = Person.getContactList()
+    
     var body: some View {
-        Text("numberslist")
+        NavigationStack {
+            List {
+                ForEach(personDetails, id: \.fullName) { person in
+                    Section(header: Text("\(person.fullName)")) {
+                        HStack{
+                            Image(systemName: "phone")
+                                .foregroundColor(.blue)
+                                .frame(width: 20, alignment: .leading)
+                            Text("\(person.phoneNumber)")
+                            Spacer()
+                        }
+                        HStack {
+                            Image(systemName: "tray")
+                                .foregroundColor(.blue)
+                                .frame(width: 20, alignment: .leading)
+                            Text("\(person.email)")
+                            Spacer()
+                            
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Contact List")
+        }
     }
 }
 
@@ -18,3 +43,5 @@ struct NumbersView_Previews: PreviewProvider {
         NumberListView()
     }
 }
+
+
